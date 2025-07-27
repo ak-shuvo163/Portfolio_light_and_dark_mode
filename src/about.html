@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK Shuvo - Portfolio</title>
+    <!--Tailwindcss output-->
+    <link rel="stylesheet" href="/src/output.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font (optional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!--Aos Animation (on Scroll)-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> 
+
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Navbar -->
+    <nav
+    class="w-full px-4 py-3 flex justify-between items-center shadow-md bg-white/80 dark:bg-gray-800/80 backdrop:blur transition duration-300 fixed top-0 left-0 z-50">
+    <div class="flex items-center gap-2">
+        <img src="images/personal_101.jpeg" alt="Logo" class="w-10 h-10 rounded-full border-2 border-pink-500">
+        <span class="font-bold text-xl tracking-tight">AK Shuvo</span>
+    </div>
+    <ul class="hidden md:flex gap-8 font-semibold">
+        <li><a href="index.html" class="nav-link hover:text-pink-500 transition">Home</a></li>
+        <li><a href="index.html#about" class="nav-link hover:text-pink-500 transition">About</a></li>
+        <li><a href="index.html#services" class="nav-link hover:text-pink-500 transition">Services</a></li>
+        <li><a href="projects.html" class="nav-link hover:text-pink-500 transition">Projects</a></li>
+        <li><a href="contact.html" class="nav-link hover:text-pink-500 transition">Contact</a></li>
+        <li><a href="blog.html" class="nav-link hover:text-pink-500 transition">Blog</a></li>
+        <li><a href="shop.html" class="nav-link hover:text-pink-500 transition">Shop</a></li>
+    </ul>
+    <div class="flex items-center gap-4">
+        <button id="theme-toggle" class="text-2xl focus:outline-none" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="md:hidden text-2xl" id="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+    </div>
+</nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed top-0 right-[-100%] w-64 h-full bg-white dark:bg-gray-900 shadow-lg flex flex-col items-start gap-6 px-6 py-10 text-lg transition-all duration-300 ease-in-out z-50">
+        <button id="close-menu" class="absolute top-4 right-4 text-2xl">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        <a href="index.html" class="block hover:text-pink-500 transition">Home</a>
+        <a href="index.html#about" class="block hover:text-pink-500 transition">About</a>
+        <a href="index.html#services" class="block hover:text-pink-500 transition">Services</a>
+        <a href="projects.html" class="block hover:text-pink-500 transition">Projects</a>
+        <a href="contact.html" class="block hover:text-pink-500 transition">Contact</a>
+        <a href="blog.html" class="block hover:text-pink-500 transition">Blog</a>
+        <a href="shop.html" class="block hover:text-pink-500 transition">Shop</a>
+    </div>
+
+
+    <!-- About.html About Me Section -->
+<section class="py-20 px-6 max-w-5xl mx-auto text-gray-800 dark:text-gray-200">
+    <h2 class="text-3xl font-bold mb-6 text-center md:text-left">About Me</h2>
+    
+    <p class="text-lg leading-relaxed max-w-3xl mx-auto md:mx-0">
+      I’m <span class="font-semibold text-pink-500">AK Shuvo</span>, a passionate web developer and CSE student at Bangladesh University of Business and Technology (BUBT). 
+      Since 2021, I have been crafting clean, creative, and meaningful websites that help businesses grow online.
+    </p>
+  
+    <h3 class="text-2xl font-semibold mt-10">My Journey</h3>
+    <p class="mt-4 max-w-3xl leading-relaxed">
+      What started as curiosity quickly turned into a deep passion for coding and web design. I enjoy turning ideas into responsive and user-friendly websites that solve real problems. 
+      Currently, I am honing my skills while balancing my studies and freelance projects.
+    </p>
+  
+    <h3 class="text-2xl font-semibold mt-10">What I Do</h3>
+    <ul class="list-disc ml-6 mt-4 max-w-3xl space-y-2">
+      <li>Frontend development using HTML, CSS, Tailwind CSS, Bootstrap, and JavaScript</li>
+      <li>Building responsive and accessible user interfaces</li>
+      <li>Collaborating with clients on Fiverr and Upwork to deliver quality projects</li>
+    </ul>
+  
+    <h3 class="text-2xl font-semibold mt-10">My Tools & Skills</h3>
+    <div class="flex flex-wrap gap-4 mt-4 max-w-3xl">
+      <span class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full">VS Code</span>
+      <span class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full">Figma</span>
+      <span class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full">GitHub</span>
+      <span class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full">Netlify</span>
+      <span class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full">React (Learning)</span>
+    </div>
+  
+    <h3 class="text-2xl font-semibold mt-10">Achievements</h3>
+    <ul class="list-disc ml-6 mt-4 max-w-3xl space-y-2">
+      <li>Completed over 10 freelance projects on Fiverr and Upwork</li>
+      <li>Participated in coding bootcamps and workshops to enhance my skills</li>
+      <li>Consistently receiving positive client feedback</li>
+    </ul>
+  
+    <h3 class="text-2xl font-semibold mt-10">Get in Touch</h3>
+    <p class="mt-4 max-w-3xl leading-relaxed">
+      Feel free to <a href="contact.html" class="text-pink-500 underline hover:text-pink-700">contact me</a> for freelance projects, collaborations, or just to say hello!
+    </p>
+  
+    <!-- Social Links -->
+    <div class="mt-6 flex gap-6 max-w-3xl">
+      <a href="https://github.com/yourusername" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-pink-500" aria-label="GitHub">
+        <i class="fab fa-github fa-lg"></i>
+      </a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-pink-500" aria-label="LinkedIn">
+        <i class="fab fa-linkedin fa-lg"></i>
+      </a>
+      <a href="https://twitter.com/yourhandle" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-pink-500" aria-label="Twitter">
+        <i class="fab fa-twitter fa-lg"></i>
+      </a>
+    </div>
+  
+    <p class="mt-12 italic text-sm text-center md:text-left max-w-3xl text-gray-500 dark:text-gray-400">
+      "Building for people, not just pixels."
+    </p>
+  </section>
+  
+  
+
+     <!-- Footer -->
+<footer class="bg-gray-900 dark:bg-gray-800 text-gray-100 py-10 px-4">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      
+      <!-- Left: Logo & Navigation -->
+      <div class="text-center md:text-left">
+        <h3 class="text-xl font-bold text-pink-400 mb-2">AK Shuvo</h3>
+        <div class="space-x-4 text-sm">
+          <a href="index.html" class="hover:text-pink-400">Home</a>
+          <a href="shop.html" class="hover:text-pink-400">Shop</a>
+          <a href="contact.html" class="hover:text-pink-400">Contact</a>
+        </div>
+      </div>
+  
+      <!-- Middle: Social Media -->
+      <div class="text-center">
+        <div class="space-x-4 text-lg">
+          <a href="https://facebook.com" target="_blank" class="hover:text-pink-400"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank" class="hover:text-pink-400"><i class="fab fa-twitter"></i></a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" class="hover:text-pink-400"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/yourusername" target="_blank" class="hover:text-pink-400"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+  
+      <!-- Right: Live Date -->
+      <div class="text-center md:text-right text-sm">
+        <p id="liveDateTime"></p>
+        <p class="mt-2 text-gray-400">&copy; <span id="year"></span> Coded with 💻 by AK Shuvo</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Update year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  
+    // Live date & time
+    function updateDateTime() {
+      const now = new Date();
+      const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+      document.getElementById("liveDateTime").textContent = now.toLocaleDateString('en-US', options);
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 60000);
+  </script>
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+     <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  </script>
+</body>
+</html>

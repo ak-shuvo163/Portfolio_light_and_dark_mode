@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK Shuvo - Portfolio</title>
+    <!--Tailwindcss output-->
+    <link rel="stylesheet" href="/src/output.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font (optional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!--Aos Animation (on Scroll)-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> 
+
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Navbar -->
+    <nav
+    class="w-full px-4 py-3 flex justify-between items-center shadow-md bg-white/80 dark:bg-gray-800/80 backdrop:blur transition duration-300 fixed top-0 left-0 z-50">
+    <div class="flex items-center gap-2">
+        <img src="images/personal_101.jpeg" alt="Logo" class="w-10 h-10 rounded-full border-2 border-pink-500">
+        <span class="font-bold text-xl tracking-tight">AK Shuvo</span>
+    </div>
+    <ul class="hidden md:flex gap-8 font-semibold">
+        <li><a href="index.html" class="nav-link hover:text-pink-500 transition">Home</a></li>
+        <li><a href="about.html" class="nav-link hover:text-pink-500 transition">About</a></li>
+        <li><a href="index.html#services" class="nav-link hover:text-pink-500 transition">Services</a></li>
+        <li><a href="projects.html" class="nav-link hover:text-pink-500 transition">Projects</a></li>
+        <li><a href="contact.html" class="nav-link hover:text-pink-500 transition">Contact</a></li>
+        <li><a href="blog.html" class="nav-link hover:text-pink-500 transition">Blog</a></li>
+        <li><a href="shop.html" class="nav-link hover:text-pink-500 transition">Shop</a></li>
+    </ul>
+    <div class="flex items-center gap-4">
+        <button id="theme-toggle" class="text-2xl focus:outline-none" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="md:hidden text-2xl" id="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+    </div>
+</nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed top-0 right-[-100%] w-64 h-full bg-white dark:bg-gray-900 shadow-lg flex flex-col items-start gap-6 px-6 py-10 text-lg transition-all duration-300 ease-in-out z-50">
+        <button id="close-menu" class="absolute top-4 right-4 text-2xl">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        <a href="index.html" class="block hover:text-pink-500 transition">Home</a>
+        <a href="about.html" class="block hover:text-pink-500 transition">About</a>
+        <a href="index.html#services" class="block hover:text-pink-500 transition">Services</a>
+        <a href="projects.html" class="block hover:text-pink-500 transition">Projects</a>
+        <a href="#contact" class="block hover:text-pink-500 transition">Contact</a>
+        <a href="blog.html" class="block hover:text-pink-500 transition">Blog</a>
+        <a href="shop.html" class="block hover:text-pink-500 transition">Shop</a>
+        </div>
+
+  <!-- Contact Section -->
+<section id="contact" class="py-16 mt-5 px-4 max-w-6xl mx-auto">
+  <!-- CTA Title -->
+  <div class="text-center mb-12" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Let's Work Together</h2>
+    <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+      Have a project in mind? Fill out the form or reach out through the contact info.
+    </p>
+  </div>
+
+  <!-- Grid Layout -->
+  <div class="grid md:grid-cols-2 gap-12">
+    <!-- Contact Form -->
+    <form action="https://formspree.io/f/xyzpwpwb" method="POST" class="space-y-6" data-aos="fade-right" id="contactForm">
+      <div>
+        <label class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Name</label>
+        <input type="text" name="name" required placeholder="Your Name"
+          class="w-full px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-pink-500" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Email</label>
+        <input type="email" name="email" required placeholder="you@example.com"
+          class="w-full px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-pink-500" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Message</label>
+        <textarea name="message" rows="5" required placeholder="Your message..."
+          class="w-full px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+      </div>
+      <button type="submit"
+        class="px-6 py-2 bg-pink-500 hover:bg-pink-600 text-white font-medium rounded transition">Send
+        Message</button>
+    </form>
+
+    <!-- Contact Info + Map -->
+    <div class="space-y-8" data-aos="fade-left">
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Contact Info</h3>
+        <p class="text-gray-600 dark:text-gray-300"><i class="fas fa-envelope mr-2 text-pink-500"></i>akshuvo163@gmail.com</p>
+        <p class="text-gray-600 dark:text-gray-300"><i class="fas fa-phone mr-2 text-pink-500"></i> +8801762429433</p>
+        <p class="text-gray-600 dark:text-gray-300"><i class="fas fa-map-marker-alt mr-2 text-pink-500"></i> Dhaka, Bangladesh</p>
+        <p class="text-gray-600 dark:text-gray-300">
+          <i class="fab fa-whatsapp mr-2 text-green-500"></i>
+          <a href="https://wa.me/8801762429433" target="_blank" class="hover:text-green-600">WhatsApp</a>
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Follow Me</h3>
+        <div class="flex gap-4">
+          <a href="https://github.com/ak-shuvo163" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-pink-500"><i class="fab fa-github fa-lg"></i></a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-pink-500"><i class="fab fa-linkedin fa-lg"></i></a>
+          <a href="https://twitter.com/yourusername" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-pink-500"><i class="fab fa-twitter fa-lg"></i></a>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div>
+        <iframe class="w-full h-64 rounded border-0" loading="lazy" allowfullscreen
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.8488014797694!2d90.40048207586373!3d23.750885688990794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8bf1d1f85ab%3A0x8243c3b1fcfd94b7!2sDhaka!5e0!3m2!1sen!2sbd!4v1689841539063!5m2!1sen!2sbd">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/8801762429433" target="_blank"
+   class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg z-50 flex items-center space-x-2">
+  <i class="fab fa-whatsapp text-xl"></i>
+  <span class="hidden md:inline">Chat</span>
+</a>
+
+ <!-- Footer -->
+ <footer class="bg-gray-900 dark:bg-gray-800 text-gray-100 py-10 px-4">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      
+      <!-- Left: Logo & Navigation -->
+      <div class="text-center md:text-left">
+        <h3 class="text-xl font-bold text-pink-400 mb-2">AK Shuvo</h3>
+        <div class="space-x-4 text-sm">
+          <a href="index.html" class="hover:text-pink-400">Home</a>
+          <a href="shop.html" class="hover:text-pink-400">Shop</a>
+          <a href="contact.html" class="hover:text-pink-400">Contact</a>
+        </div>
+      </div>
+  
+      <!-- Middle: Social Media -->
+      <div class="text-center">
+        <div class="space-x-4 text-lg">
+          <a href="https://facebook.com" target="_blank" class="hover:text-pink-400"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank" class="hover:text-pink-400"><i class="fab fa-twitter"></i></a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" class="hover:text-pink-400"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/ak-shuvo163" target="_blank" class="hover:text-pink-400"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+  
+      <!-- Right: Live Date -->
+      <div class="text-center md:text-right text-sm">
+        <p id="liveDateTime"></p>
+        <p class="mt-2 text-gray-400">&copy; <span id="year"></span> Coded with 💻 by AK Shuvo</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ✅ Toast Message Script -->
+<script>
+  const contactForm = document.getElementById('contactForm');
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    // Optional: actually submit if using Formspree
+    fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { 'Accept': 'application/json' }
+    })
+      .then(() => {
+        alert('✅ Message sent successfully!');
+        contactForm.reset();
+      })
+      .catch(() => {
+        alert('❌ Something went wrong. Try again later.');
+      });
+  });
+</script>
+  <script>
+    // Update year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  
+    // Live date & time
+    function updateDateTime() {
+      const now = new Date();
+      const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+      document.getElementById("liveDateTime").textContent = now.toLocaleDateString('en-US', options);
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 60000);
+  </script>
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+     <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  </script>
+</body>
+</html>

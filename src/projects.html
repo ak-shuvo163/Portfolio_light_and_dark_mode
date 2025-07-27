@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK Shuvo - Portfolio</title>
+    <!--Tailwindcss output-->
+    <link rel="stylesheet" href="/src/output.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font (optional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!--Aos Animation (on Scroll)-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> 
+
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Navbar -->
+    <nav
+    class="w-full px-4 py-3 flex justify-between items-center shadow-md bg-white/80 dark:bg-gray-800/80 backdrop:blur transition duration-300 fixed top-0 left-0 z-50">
+    <div class="flex items-center gap-2">
+        <img src="images/personal_101.jpeg" alt="Logo" class="w-10 h-10 rounded-full border-2 border-pink-500">
+        <span class="font-bold text-xl tracking-tight">AK Shuvo</span>
+    </div>
+    <ul class="hidden md:flex gap-8 font-semibold">
+        <li><a href="index.html" class="nav-link hover:text-pink-500 transition">Home</a></li>
+        <li><a href="about.html" class="nav-link hover:text-pink-500 transition">About</a></li>
+        <li><a href="index.html#services" class="nav-link hover:text-pink-500 transition">Services</a></li>
+        <li><a href="projects.html" class="nav-link hover:text-pink-500 transition">Projects</a></li>
+        <li><a href="contact.html" class="nav-link hover:text-pink-500 transition">Contact</a></li>
+        <li><a href="#blog" class="nav-link hover:text-pink-500 transition">Blog</a></li>
+        <li><a href="#shop" class="nav-link hover:text-pink-500 transition">Shop</a></li>
+    </ul>
+    <div class="flex items-center gap-4">
+        <button id="theme-toggle" class="text-2xl focus:outline-none" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="md:hidden text-2xl" id="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+    </div>
+</nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed top-0 right-[-100%] w-64 h-full bg-white dark:bg-gray-900 shadow-lg flex flex-col items-start gap-6 px-6 py-10 text-lg transition-all duration-300 ease-in-out z-50">
+        <button id="close-menu" class="absolute top-4 right-4 text-2xl">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        <a href="index.html" class="block hover:text-pink-500 transition">Home</a>
+        <a href="about.html" class="block hover:text-pink-500 transition">About</a>
+        <a href="index.html#services" class="block hover:text-pink-500 transition">Services</a>
+        <a href="projects.html" class="block hover:text-pink-500 transition">Projects</a>
+        <a href="contact.html" class="block hover:text-pink-500 transition">Contact</a>
+        <a href="#contact" class="block hover:text-pink-500 transition">Blog</a>
+        <a href="#contact" class="block hover:text-pink-500 transition">Shop</a>
+    </div>
+
+
+
+      <!-- Portfolio Section -->
+  <section class="py-16 mt-5 px-4 max-w-6xl mx-auto" data-aos="fade-up">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl md:text-4xl font-bold mb-2">All Projects</h2>
+      <div class="h-1 w-24 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto rounded"></div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+      
+      <!-- Project Card -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition p-5 flex flex-col" data-aos="zoom-in" data-aos-delay="100">
+        <img src="images/portfolio_img.jpg" alt="Portfolio Project" class="rounded-lg mb-4 object-cover h-48 w-full hover:scale-105 transition-transform duration-300">
+        <h3 class="text-xl font-semibold mb-2">Portfolio Template</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Responsive portfolio site with product filtering.</p>
+        <div class="mt-auto flex gap-2">
+          <a href="https://ak-shuvo163.github.io/Portfolio-/" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded text-sm"><i class="fa-solid fa-eye mr-1"></i>Live Preview</a>
+          <a href="https://github.com/ak-shuvo163/Portfolio.git" target="_blank" class="bg-gray-900 hover:bg-gray-700 text-white px-4 py-2 rounded text-sm"><i class="fab fa-github mr-1"></i>Source Code</a>
+        </div>
+      </div>
+
+      <!-- Repeat Project Cards -->
+      <!-- Project 2 -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-5 flex flex-col" data-aos="zoom-in" data-aos-delay="200">
+        <img src="images/DelishDine_restaurant.jpg" alt="E-commerce Project" class="rounded-lg mb-4 object-cover h-48 w-full hover:scale-105 transition">
+        <h3 class="text-xl font-semibold mb-2">E-commerce Template</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Shop template with cart and filtering functionality.</p>
+        <div class="mt-auto flex gap-2">
+          <a href="https://ak-shuvo163.github.io/Restaurant-Website/" class="bg-pink-500 text-white px-4 py-2 rounded text-sm">Live Preview</a>
+          <a href="https://github.com/ak-shuvo163/Restaurant-Website.git" class="bg-gray-900 hover:bg-gray-700 text-white px-4 py-2 rounded text-sm">Source Code</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-5 flex flex-col" data-aos="zoom-in" data-aos-delay="300">
+        <img src="https://via.placeholder.com/300x180" alt="Cafe Site" class="rounded-lg mb-4 object-cover h-48 w-full hover:scale-105 transition">
+        <h3 class="text-xl font-semibold mb-2">Cafe Website</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Responsive website for cafes with a menu filter.</p>
+        <div class="mt-auto flex gap-2">
+          <a href="#" class="bg-pink-500 text-white px-4 py-2 rounded text-sm">Live Preview</a>
+          <a href="#" class="bg-gray-900 hover:bg-gray-700 text-white px-4 py-2 rounded text-sm">Source Code</a>
+        </div>
+      </div>
+
+      <!-- Add more project cards here -->
+    </div>
+  </section>
+
+
+     <!-- Footer -->
+<footer class="bg-gray-900 dark:bg-gray-800 text-gray-100 py-10 px-4">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      
+      <!-- Left: Logo & Navigation -->
+      <div class="text-center md:text-left">
+        <h3 class="text-xl font-bold text-pink-400 mb-2">AK Shuvo</h3>
+        <div class="space-x-4 text-sm">
+          <a href="index.html" class="hover:text-pink-400">Home</a>
+          <a href="shop.html" class="hover:text-pink-400">Shop</a>
+          <a href="contact.html" class="hover:text-pink-400">Contact</a>
+        </div>
+      </div>
+  
+      <!-- Middle: Social Media -->
+      <div class="text-center">
+        <div class="space-x-4 text-lg">
+          <a href="https://facebook.com" target="_blank" class="hover:text-pink-400"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank" class="hover:text-pink-400"><i class="fab fa-twitter"></i></a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" class="hover:text-pink-400"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/yourusername" target="_blank" class="hover:text-pink-400"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+  
+      <!-- Right: Live Date -->
+      <div class="text-center md:text-right text-sm">
+        <p id="liveDateTime"></p>
+        <p class="mt-2 text-gray-400">&copy; <span id="year"></span> Coded with 💻 by AK Shuvo</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Update year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  
+    // Live date & time
+    function updateDateTime() {
+      const now = new Date();
+      const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+      document.getElementById("liveDateTime").textContent = now.toLocaleDateString('en-US', options);
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 60000);
+  </script>
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+     <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  </script>
+</body>
+</html>

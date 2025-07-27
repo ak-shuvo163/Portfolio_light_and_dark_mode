@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK Shuvo - Portfolio</title>
+    <!--Tailwindcss output-->
+    <link rel="stylesheet" href="/src/output.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font (optional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!--Aos Animation (on Scroll)-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> 
+
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Navbar -->
+    <nav
+    class="w-full px-4 py-3 flex justify-between items-center shadow-md bg-white/80 dark:bg-gray-800/80 backdrop:blur transition duration-300 fixed top-0 left-0 z-50">
+    <div class="flex items-center gap-2">
+        <img src="images/personal_101.jpeg" alt="Logo" class="w-10 h-10 rounded-full border-2 border-pink-500">
+        <span class="font-bold text-xl tracking-tight">AK Shuvo</span>
+    </div>
+    <ul class="hidden md:flex gap-8 font-semibold">
+        <li><a href="index.html" class="nav-link hover:text-pink-500 transition">Home</a></li>
+        <li><a href="about.html" class="nav-link hover:text-pink-500 transition">About</a></li>
+        <li><a href="index.html#services" class="nav-link hover:text-pink-500 transition">Services</a></li>
+        <li><a href="projects.html" class="nav-link hover:text-pink-500 transition">Projects</a></li>
+        <li><a href="contact.html" class="nav-link hover:text-pink-500 transition">Contact</a></li>
+        <li><a href="blog.html" class="nav-link hover:text-pink-500 transition">Blog</a></li>
+        <li><a href="shop.html" class="nav-link hover:text-pink-500 transition">Shop</a></li>
+    </ul>
+    <div class="flex items-center gap-4">
+        <button id="theme-toggle" class="text-2xl focus:outline-none" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="md:hidden text-2xl" id="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+    </div>
+</nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed top-0 right-[-100%] w-64 h-full bg-white dark:bg-gray-900 shadow-lg flex flex-col items-start gap-6 px-6 py-10 text-lg transition-all duration-300 ease-in-out z-50">
+        <button id="close-menu" class="absolute top-4 right-4 text-2xl">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        <a href="#home" class="block hover:text-pink-500 transition">Home</a>
+        <a href="about.html" class="block hover:text-pink-500 transition">About</a>
+        <a href="index.html#services" class="block hover:text-pink-500 transition">Services</a>
+        <a href="projects.html" class="block hover:text-pink-500 transition">Projects</a>
+        <a href="contact.html" class="block hover:text-pink-500 transition">Contact</a>
+        <a href="blog.html" class="block hover:text-pink-500 transition">Blog</a>
+        <a href="shop.html" class="block hover:text-pink-500 transition">Shop</a>
+    </div>
+
+    <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-purple-600 to-pink-500 text-white py-20 px-4 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Web Design & Development Blog</h1>
+      <p class="text-lg md:text-xl opacity-90">Stay updated with tutorials, tips, and trends from the frontend world.</p>
+    </div>
+  </section>
+
+  <!-- Featured Blogs -->
+  <section class="py-16 px-4 max-w-6xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-bold mb-10 text-center">Featured Posts</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+        <img src="https://via.placeholder.com/600x300" alt="Blog Image" class="w-full">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Mastering Tailwind CSS for Responsive Design</h3>
+          <p class="text-gray-600 dark:text-gray-300">Learn how to build responsive websites quickly using Tailwind CSS and utility-first workflows.</p>
+          <div class="flex justify-between items-center text-sm mt-4 text-gray-500 dark:text-gray-400">
+            <span>By Shuvo</span>
+            <span>3 min read</span>
+          </div>
+          <a href="#" class="mt-4 inline-block text-pink-600 dark:text-pink-400 font-semibold">Read More →</a>
+        </div>
+      </div>
+      <!-- Another featured post -->
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+        <img src="https://via.placeholder.com/600x300" alt="Blog Image" class="w-full">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Dark Mode: UX Trends & Implementation Tips</h3>
+          <p class="text-gray-600 dark:text-gray-300">Explore the rise of dark mode in UI/UX and how to implement it effectively in web design.</p>
+          <div class="flex justify-between items-center text-sm mt-4 text-gray-500 dark:text-gray-400">
+            <span>By Shuvo</span>
+            <span>4 min read</span>
+          </div>
+          <a href="#" class="mt-4 inline-block text-pink-600 dark:text-pink-400 font-semibold">Read More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Blog Posts -->
+  <section class="py-10 px-4 max-w-6xl mx-auto">
+    <h2 class="text-2xl font-bold mb-6">All Blog Posts</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white dark:bg-gray-800 p-5 rounded shadow">
+        <h3 class="text-lg font-semibold mb-1">HTML5 Best Practices in 2025</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">#HTML #WebDev</p>
+        <p class="text-gray-700 dark:text-gray-300">Discover the latest HTML5 standards and how to use them for better semantics and SEO.</p>
+        <a href="#" class="text-pink-600 dark:text-pink-400 text-sm font-semibold mt-2 inline-block">Read More</a>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-5 rounded shadow">
+        <h3 class="text-lg font-semibold mb-1">JavaScript DOM Manipulation Deep Dive</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">#JavaScript #DOM</p>
+        <p class="text-gray-700 dark:text-gray-300">Learn how to use vanilla JavaScript to manipulate the DOM and create interactive UIs.</p>
+        <a href="#" class="text-pink-600 dark:text-pink-400 text-sm font-semibold mt-2 inline-block">Read More</a>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-5 rounded shadow">
+        <h3 class="text-lg font-semibold mb-1">Top 5 UI/UX Design Trends</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">#UIUX #Trends</p>
+        <p class="text-gray-700 dark:text-gray-300">Explore what's trending in the UI/UX world and how to implement them in real projects.</p>
+        <a href="#" class="text-pink-600 dark:text-pink-400 text-sm font-semibold mt-2 inline-block">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="text-center py-16 bg-gray-100 dark:bg-gray-700">
+    <h2 class="text-2xl font-bold mb-4">Want to collaborate or have questions?</h2>
+    <a href="contact.html" class="inline-block bg-pink-600 text-white px-6 py-3 rounded hover:bg-pink-700 transition">Contact Me</a>
+  </section>
+      
+
+
+    <!-- Footer -->
+<footer class="bg-gray-900 dark:bg-gray-800 text-gray-100 py-10 px-4">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      
+      <!-- Left: Logo & Navigation -->
+      <div class="text-center md:text-left">
+        <h3 class="text-xl font-bold text-pink-400 mb-2">AK Shuvo</h3>
+        <div class="space-x-4 text-sm">
+          <a href="index.html" class="hover:text-pink-400">Home</a>
+          <a href="shop.html" class="hover:text-pink-400">Shop</a>
+          <a href="contact.html" class="hover:text-pink-400">Contact</a>
+        </div>
+      </div>
+  
+      <!-- Middle: Social Media -->
+      <div class="text-center">
+        <div class="space-x-4 text-lg">
+          <a href="https://facebook.com" target="_blank" class="hover:text-pink-400"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank" class="hover:text-pink-400"><i class="fab fa-twitter"></i></a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" class="hover:text-pink-400"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/yourusername" target="_blank" class="hover:text-pink-400"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+  
+      <!-- Right: Live Date -->
+      <div class="text-center md:text-right text-sm">
+        <p id="liveDateTime"></p>
+        <p class="mt-2 text-gray-400">&copy; <span id="year"></span> Coded with 💻 by AK Shuvo</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Update year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  
+    // Live date & time
+    function updateDateTime() {
+      const now = new Date();
+      const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+      document.getElementById("liveDateTime").textContent = now.toLocaleDateString('en-US', options);
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 60000);
+  </script>
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+     <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  </script>
+</body>
+</html>
