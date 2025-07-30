@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK Shuvo - Portfolio</title>
+    <!--Tailwindcss output-->
+    <link rel="stylesheet" href="/src/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font (optional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!--Aos Animation (on Scroll)-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> 
+
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <style>
+        @keyframes gradient-x {
+          0%, 100% { background-position: left center; }
+          50% { background-position: right center; }
+        }
+        @keyframes pop {
+          0% { transform: scale(0.9); opacity: 0; }
+          100% { transform: scale(1); opacity: 1; }
+        }
+        .animate-gradient-x {
+          background-size: 200% 200%;
+          animation: gradient-x 5s ease infinite;
+        }
+        .animate-gradient-pop {
+          animation: pop 1s ease forwards;
+        }
+        .animate-fade-up {
+          animation: fadeUp 1s ease-in-out forwards;
+          opacity: 0;
+        }
+        @keyframes fadeUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        </style>
+        
+</head>
+
+<body class="overflow-x-hidden bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Navbar -->
+    <nav
+    class="w-full px-4 py-3 flex justify-between items-center shadow-md bg-white/80 dark:bg-gray-800/80 backdrop:blur transition duration-300 fixed top-0 left-0 z-50">
+    <div class="font-bold text-center mb-3">
+        <a href="#" class="text-white text-xl sm:text-3xl">🛍️<span class="text-pink-500">Can</span><span class="text-blue-500 font-bold">vas</span><span class="text-red-500">Cod</span><span class="text-purple-300 font-semibold">e</span></a>
+    </div>
+    <ul class="hidden md:flex gap-8 font-semibold">
+        <li><a href="index.html" class="nav-link hover:text-pink-500 transition">Home</a></li>
+        <li><a href="about.html" class="nav-link hover:text-pink-500 transition">About</a></li>
+        <li><a href="index.html#services" class="nav-link hover:text-pink-500 transition">Services</a></li>
+        <li><a href="projects.html" class="nav-link hover:text-pink-500 transition">Projects</a></li>
+        <li><a href="contact.html" class="nav-link hover:text-pink-500 transition">Contact</a></li>
+        <li><a href="blog.html" class="nav-link hover:text-pink-500 transition">Blog</a></li>
+        <li><a href="shop.html" class="nav-link hover:text-pink-500 transition">Shop</a></li>
+    </ul>
+    <div class="flex items-center gap-4">
+        <button id="theme-toggle" class="text-2xl focus:outline-none" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="md:hidden text-2xl" id="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+    </div>
+</nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed top-0 right-[-100%] w-64 h-full bg-white dark:bg-gray-900 shadow-lg flex flex-col items-start gap-6 px-6 py-10 text-lg transition-all duration-300 ease-in-out z-50">
+        <button id="close-menu" class="absolute top-4 right-4 text-2xl">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <div class="font-bold text-center mb-3">
+            <a href="#" class="text-white text-xl sm:text-3xl">🛍️<span class="text-pink-500">Can</span><span class="text-blue-500 font-bold">vas</span><span class="text-red-500">Cod</span><span class="text-purple-300 font-semibold">e</span></a>
+        </div>
+        <a href="index.html" class="block hover:text-pink-500 transition">Home</a>
+        <a href="about.html" class="block hover:text-pink-500 transition">About</a>
+        <a href="index.html#services" class="block hover:text-pink-500 transition">Services</a>
+        <a href="projects.html" class="block hover:text-pink-500 transition">Projects</a>
+        <a href="contact.html" class="block hover:text-pink-500 transition">Contact</a>
+        <a href="blog.html" class="block hover:text-pink-500 transition">Blog</a>
+        <a href="shop.html" class="block hover:text-pink-500 transition">Shop</a>
+        </div>
+
+     <!-- Hero Welcome Section -->  
+      <section class="text-center py-16 mt-14 px-4 bg-white dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-800 dark:text-white transition-all duration-300">
+        <h1 class="text-4xl sm:text-6xl font-extrabold mb-4" style="font-family: 'Playfair Display', serif;" data-aos="fade-up">
+          <span class="bg-gradient-to-r from-pink-400 via-blue-500 to-purple-500 bg-clip-text text-transparent animate-gradient-x">Welcome to</span><br>
+          <span class="text-6xl sm:text-7xl tracking-wider bg-gradient-to-r from-pink-500 via-blue-400 to-purple-500 bg-clip-text text-transparent drop-shadow-md">
+            Can<span class="text-blue-400">vas</span><span class="text-red-400">Cod</span><span class="text-purple-400">e</span>
+          </span>
+        </h1>
+        <p class="text-gray-600 dark:text-gray-300 text-lg mt-6 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="300">
+          Your one-stop shop for modern, responsive website templates and themes.
+        </p>
+      </section>
+      
+ 
+   <!-- CanvasCode Shop Section -->
+<section class="bg-gray-100 dark:bg-gray-900 py-16 px-4">
+    <div class="max-w-7xl mx-auto text-center">
+  
+      <!-- Product Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        
+        <!-- Product Card 1 -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition transform hover:scale-[1.02]">
+          <img src="images/portfolio_img.jpg" alt="Modern Portfolio Template" class="w-full h-52 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Modern Portfolio Template</h3>
+            <p class="text-pink-600 font-bold mb-2">$2.99</p>
+            <div class="flex gap-2">
+              <a href="https://ak-shuvo163.github.io/Portfolio-/" target="_blank" class="flex-1 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white px-4 py-2 rounded text-sm text-center">Live Preview</a>
+              <a href="https://akshuvo.gumroad.com/l/sqvrui?_gl=1*tnuajq*_ga*MjA0NTU0MDk5MS4xNzUyODQ5ODg0*_ga_6LJN6D94N6*czE3NTM2MjY3NTEkbzExJGcxJHQxNzUzNjI2NzUyJGo1OSRsMCRoMA.." target="_blank" class="flex-1 bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded text-sm text-center">Buy on Gumroad</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Product Card 2 -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition transform hover:scale-[1.02]">
+          <img src="images/shop_DelishDine.jpg" alt="Responsive Restaurant Site" class="w-full h-52 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Responsive Restaurant Site</h3>
+            <p class="text-pink-600 font-bold mb-2">$2.99</p>
+            <div class="flex gap-2">
+              <a href="https://ak-shuvo163.github.io/Restaurant-Website/" target="_blank" class="flex-1 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white px-4 py-2 rounded text-sm text-center">Live Preview</a>
+              <a href="https://akshuvo.gumroad.com/l/fuzel?_gl=1*14xts2a*_ga*MjA0NTU0MDk5MS4xNzUyODQ5ODg0*_ga_6LJN6D94N6*czE3NTM2MjY3NTEkbzExJGcxJHQxNzUzNjI2NzUyJGo1OSRsMCRoMA.." target="_blank" class="flex-1 bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded text-sm text-center">Buy on Gumroad</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- 👉 You can add more product cards here -->
+  
+      </div>
+  
+      <!-- Payment Info -->
+      <div class="mt-12 text-center">
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Payments accepted via: <span class="font-semibold">Gumroad (Card, PayPal)</span><br>
+          Want to pay via <span class="font-semibold text-pink-500">bKash/Nagad</span>? <a href="contact.html" class="text-pink-500 underline hover:text-pink-700">Contact me</a> directly.
+        </p>
+      </div>
+  
+    </div>
+  </section>
+  
+
+  <!-- Footer -->
+ <footer class="bg-gray-900 dark:bg-gray-800 text-gray-100 py-10 px-4">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      
+      <!-- Left: Logo & Navigation -->
+      <div class="text-center md:text-left">
+        <h3 class="text-xl font-bold text-pink-400 mb-2">AK Shuvo</h3>
+        <div class="space-x-4 text-sm">
+          <a href="index.html" class="hover:text-pink-400">Home</a>
+          <a href="shop.html" class="hover:text-pink-400">Shop</a>
+          <a href="contact.html" class="hover:text-pink-400">Contact</a>
+        </div>
+      </div>
+  
+      <!-- Middle: Social Media -->
+      <div class="text-center">
+        <div class="space-x-4 text-lg">
+          <a href="https://facebook.com" target="_blank" class="hover:text-pink-400"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank" class="hover:text-pink-400"><i class="fab fa-twitter"></i></a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" class="hover:text-pink-400"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/ak-shuvo163" target="_blank" class="hover:text-pink-400"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+  
+      <!-- Right: Live Date -->
+      <div class="text-center md:text-right text-sm">
+        <p id="liveDateTime"></p>
+        <p class="mt-2 text-gray-400">&copy; <span id="year"></span> Coded with 💻 by AK Shuvo</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ✅ Toast Message Script -->
+<script>
+  const contactForm = document.getElementById('contactForm');
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    // Optional: actually submit if using Formspree
+    fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { 'Accept': 'application/json' }
+    })
+      .then(() => {
+        alert('✅ Message sent successfully!');
+        contactForm.reset();
+      })
+      .catch(() => {
+        alert('❌ Something went wrong. Try again later.');
+      });
+  });
+</script>
+  <script>
+    // Update year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  
+    // Live date & time
+    function updateDateTime() {
+      const now = new Date();
+      const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+      document.getElementById("liveDateTime").textContent = now.toLocaleDateString('en-US', options);
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 60000);
+  </script>
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+     <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  </script>
+</body>
+</html>

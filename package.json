@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --minify",
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "copy:assets": "cpx \"src/*.{html,js}\" dist/ && cpx \"src/images/**/*\" dist/images/",
+    "build": "npm run build:css && npm run copy:assets",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,6 +14,7 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "cpx": "^1.5.0",
     "tailwindcss": "^3.4.17"
   }
 }
